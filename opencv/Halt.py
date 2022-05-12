@@ -26,10 +26,10 @@ b=Trafficupdate('/home/hra/Downloads/r2.png',1)
 c=Trafficupdate('/home/hra/Downloads/r3.png',2)
 d=Trafficupdate('/home/hra/Downloads/r4.png',3)
 while True:
-        cv2.imshow("1",a)
-        cv2.imshow("2",b)
-        cv2.imshow("3",c)
-        cv2.imshow("4",d)
+        cv2.imshow("Traffic level 0",a)
+        cv2.imshow("Traffic level 1",b)
+        cv2.imshow("Traffic level 2",c)
+        cv2.imshow("Traffic level 3",d)
         if cv2.waitKey(10) & 0xff == ord('q'):   # 1 is the time in ms
             break
 cap.release()
