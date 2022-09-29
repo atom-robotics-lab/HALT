@@ -18,10 +18,10 @@ def Trafficupdate(p,l):
     print(l,ty)
     return cropped_image1
 #MAIN
-a=Trafficupdate('/home/hra/Downloads/r1.png',1)
-b=Trafficupdate('/home/hra/Downloads/r2.png',2)
-c=Trafficupdate('/home/hra/Downloads/r3.png',3)
-d=Trafficupdate('/home/hra/Downloads/r4.png',4)
+a=Trafficupdate('./images/r1.png',0)
+b=Trafficupdate('./images/r2.png',1)
+c=Trafficupdate('./images/r3.png',2)
+d=Trafficupdate('./images/r4.png',3)
 while True:
         cv2.imshow("1",a)
         cv2.imshow("2",b)
@@ -29,5 +29,5 @@ while True:
         cv2.imshow("4",d)
         if cv2.waitKey(10) & 0xff == ord('q'):   # 1 is the time in ms
             break
-cap.release()
+
 cv2.destroyAllWindows()

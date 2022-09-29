@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 def Trafficupdate(p,l):
     frame=cv2.imread(p)
+    cv2.imshow('htui',frame)
     brg=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
     ret, thresh = cv2.threshold(brg, 90, 255, cv2.THRESH_BINARY)
     inverted_image = cv2.bitwise_not(thresh)
@@ -21,10 +22,10 @@ def Trafficupdate(p,l):
     cv2.drawContours(cropped_image1, contours, -1, (0,255,0), 1)
     return cropped_image1
 #MAIN
-a=Trafficupdate('/home/hra/Downloads/r1.png',0)
-b=Trafficupdate('/home/hra/Downloads/r2.png',1)
-c=Trafficupdate('/home/hra/Downloads/r3.png',2)
-d=Trafficupdate('/home/hra/Downloads/r4.png',3)
+a=Trafficupdate('./images/r1.png',0)
+b=Trafficupdate('./images/r2.png',1)
+c=Trafficupdate('./images/r3.png',2)
+d=Trafficupdate('./images/r4.png',3)
 while True:
         cv2.imshow("Traffic level 0",a)
         cv2.imshow("Traffic level 1",b)
